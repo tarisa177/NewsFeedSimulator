@@ -20,14 +20,18 @@ class NewsViewModel : ViewModel() {
 
     init {
         viewModelScope.launch {
+            try {
 
-            val newsJob = async {
-                repository.getNewsFlow().collect { news ->
-                    _newsList.value = _newsList.value + news
+                val newsJob = async {
+                    repository.getNewsFlow().collect { news ->
+                        _newsList.value = _newsList.value + news
+                    }
                 }
-            }
 
-            newsJob.await()
+                newsJob.await()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
         }
     }
 
