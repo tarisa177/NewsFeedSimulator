@@ -33,4 +33,4 @@ Aplikasi Android sederhana untuk menampilkan dan mengelola simulasi news feed.
 
 `com.example.newsfeedsimulator`
 ## Tampilan Aplikasi
-![Tampilan Aplikasi](Screenshot/bukti.png)
+![Tampilan Aplikasi](bukti.png)
